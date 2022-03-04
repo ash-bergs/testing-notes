@@ -1,0 +1,23 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Collection of notes for various JS testing libs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ash-bergs/testing-notes.git"
+  },
+  "author": "ash-bergs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ash-bergs/testing-notes/issues"
+  },
+  "homepage": "https://github.com/ash-bergs/testing-notes#readme",
+  "dependencies": {
+    "@playwright/test": "^1.19.2",
+    "prettier": "^2.5.1"
+  }
+}
