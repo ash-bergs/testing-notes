@@ -1,23 +1,29 @@
 {
-  "name": "notes",
+  "name": "pw-testing",
   "version": "1.0.0",
-  "description": "Collection of notes for various JS testing libs",
+  "description": "A directory of testing notes from various testing courses",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore --ext .js, .ts, .tsx .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "check-types": "tsc",
+    "validate": "npm run check-types && npm run check-format && npm run lint && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ash-bergs/testing-notes.git"
-  },
-  "author": "ash-bergs",
+  "author": "ash_bergs",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ash-bergs/testing-notes/issues"
-  },
-  "homepage": "https://github.com/ash-bergs/testing-notes#readme",
   "dependencies": {
-    "@playwright/test": "^1.19.2",
+    "@playwright/test": "^1.19.1",
     "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "typescript": "^4.6.3"
   }
 }
